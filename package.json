@@ -5,12 +5,14 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "dev": "vite",
-    "expose-dev": "vite --host",
+    "dev": "npm run build-css && vite",
+    "expose-dev": "npm run build-css && vite --host",
     "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "expose-preview": "vite preview --host"
+    "preview": "npm run build-css && vite preview",
+    "expose-preview": "npm run build-css && vite preview --host",
+    "build-css": "npx tailwindcss -i ./src/index.css -o ./style.css"
+    
   },
   "dependencies": {
     "jest": "^29.7.0",

@@ -1,15 +1,8 @@
-import './App.css'
+import { loginUi } from "./components/login/login";
 
-function App() {
-  
-
-  return (
-    <>
-      <div>
-        <h1>Hello World</h1>
-      </div>
-    </>
-  )
+export default function App() {
+  return (<>
+    <loginUi/>
+  </>
+  );
 }
-
-export default App
